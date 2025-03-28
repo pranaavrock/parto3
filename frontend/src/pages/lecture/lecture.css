@@ -1,0 +1,230 @@
+.lecture-page {
+  display: flex;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 20px;
+  gap: 20px; /* Spacing between left and right sections */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Left Section (Lecture Video & Quiz) */
+.left {
+  width: 70%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; /* Prevents unwanted overflow */
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+/* Right Section (Lecture List & Form) */
+.right {
+  width: 30%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+/* Scrollable Lecture List */
+.lecture-list {
+  max-height: 300px; /* Set a fixed height */
+  overflow-y: auto; /* Enables vertical scrolling */
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Custom Scrollbar */
+.lecture-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lecture-list::-webkit-scrollbar-thumb {
+  background-color: #8a4baf;
+  border-radius: 4px;
+}
+
+.lecture-list::-webkit-scrollbar-thumb:hover {
+  background-color: #5a2d82;
+}
+
+/* Lecture Form */
+.lecture-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.lecture-form h2 {
+  font-size: 22px;
+  color: #8a4baf;
+  margin-bottom: 15px;
+}
+
+.lecture-form form {
+  text-align: left;
+}
+
+.lecture-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.lecture-form input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #8a4baf;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Lecture Item */
+.lecture-number {
+  background-color: #f0f0f0;
+  padding: 12px;
+  border: 1px solid #8a4baf;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #8a4baf;
+    color: white;
+  }
+}
+
+.active {
+  background-color: #8a4baf;
+  color: white;
+}
+
+/* Add Lecture & Quiz Buttons */
+.add-btn,
+.quiz-btn {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.add-btn:hover,
+.quiz-btn:hover {
+  background-color: #8a4baf;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: red;
+  color: yellow;
+  font-weight: bold;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+/* Progress Bar */
+.progress-container {
+  margin: 15px 0;
+}
+
+.progress {
+  width: 80%;
+  background-color: #333;
+  padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+}
+
+/* Progress Bar Styling */
+progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #8a4baf;
+  border-radius: 5px;
+}
+.lecture-list {
+  max-height: 300px; /* Ensures a fixed height */
+  overflow-y: auto !important; /* Ensures scrolling */
+  display: block; /* Ensures block layout */
+}
+
+.right {
+  overflow-y: auto; /* Ensures right section scrolls if needed */
+  max-height: 80vh; /* Prevents excessive height */
+}
+/* Adjust Left Section Width */
+.left {
+  width: 75%; /* Increased from 70% */
+}
+
+/* Adjust Right Section Width */
+.right {
+  width: 25%; /* Decreased from 30% */
+}
+
+/* Add Test Button at Bottom */
+.test-btn {
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.test-btn:hover {
+  background-color: #388E3C;
+}

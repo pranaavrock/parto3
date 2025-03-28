@@ -1,0 +1,161 @@
+.admin-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.admin-profile-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Adjusted width */
+  max-width: 600px; /* Ensuring it doesn't get too wide */
+  text-align: center;
+}
+
+.profile-header {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.profile-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  margin-bottom: 10px;
+}
+
+.profile-info {
+  width: 100%;
+}
+
+/* Ensure input fields are properly sized */
+.input-group {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px; /* Increased padding for better usability */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px; /* Increased font size for better readability */
+  box-sizing: border-box; /* Ensures proper width adjustments */
+}
+
+textarea {
+  resize: vertical;
+  height: 80px; /* Adjusted height */
+}
+
+/* Centering the account details section */
+.account-details, .role-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #444;
+}
+
+.status-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Styling the Save Button */
+.save-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 14px; /* Increased padding */
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #0056b3;
+}
+
+.save-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .admin-profile-card {
+    width: 90%; /* Better fitting for mobile screens */
+    padding: 15px;
+  }
+
+  .profile-picture img {
+    width: 80px;
+    height: 80px;
+  }
+
+  input, textarea, select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .save-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+.back-btn {
+  background-color: #ddd;
+  color: #333;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.back-btn:hover {
+  background-color: #bbb;
+}

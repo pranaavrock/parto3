@@ -1,0 +1,106 @@
+/* auth.css */
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.auth-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 380px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.auth-form:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s ease-in-out;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.common-btn {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.common-btn:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: #ff4b2b;
+}
+
+.admin-option {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #444;
+  font-weight: bold;
+}
+
+.admin-option a {
+  color: #ff4b2b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.admin-option a:hover {
+  color: #ff416c;
+  text-decoration: underline;
+}

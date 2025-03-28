@@ -1,0 +1,170 @@
+.main-content {
+  display: flex; /* Horizontal layout */
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping */
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: nowrap; /* Ensures cards remain in a row */
+}
+
+/* Responsive Fix: Wrap on smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: center;
+  }
+}
+
+/* Course Lecture Box */
+.box {
+  background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+  color: #333;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  min-width: 250px; /* Ensures fixed width for horizontal scrolling */
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allows wrapping */
+}
+
+/* Stats Sidebar */
+.stats-container {
+  width: 100%; /* Makes it fill the browser width */
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex-shrink: 0;
+  justify-content: space-between; /* Spreads items evenly */
+  flex-wrap: wrap; /* Allows wrapping if needed */
+}
+
+/* Table Container with Fixed Size */
+.table-container {
+  width: 100%;
+  max-width: 900px; /* Set a fixed max width */
+  height: 450px; /* Fixed height */
+  overflow: hidden; /* Prevents resizing */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable Table with Fixed Dimensions */
+.scrollable-table {
+  display: block;
+  width: 100%;
+  height: 100%; /* Ensures it fills the container */
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures consistent column sizing */
+}
+
+/* Table Headings and Data */
+.table th, .table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." for overflow text */
+}
+
+/* Sticky Table Header */
+.table thead {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+.add-user-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-user-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.add-user-btn:active {
+  background-color: #3e8e41;
+  transform: scale(0.95);
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}

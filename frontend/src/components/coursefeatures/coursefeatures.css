@@ -1,0 +1,331 @@
+/* Course Features CSS */
+.course-features {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 119, 182, 0.05) 0%, rgba(0, 180, 216, 0.05) 100%);
+  z-index: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a2472;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #5e6472;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  margin: 0 auto;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.carousel-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  min-height: 350px;
+  perspective: 1000px;
+}
+
+.carousel-slider.transition-active .feature-card {
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-button {
+  background: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: #0077b6;
+  font-size: 1.2rem;
+}
+
+.nav-button:hover {
+  background: #0077b6;
+  color: white;
+  transform: scale(1.1);
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  flex: 0 0 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transform: scale(0.9);
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  transition: all 0.3s ease;
+}
+
+.feature-card.center {
+  flex: 0 0 280px;
+  height: 350px;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card.left {
+  transform: translateX(-50px) scale(0.9);
+}
+
+.feature-card.right {
+  transform: translateX(50px) scale(0.9);
+}
+
+.feature-icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e6f7ff, #b3e0ff);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.feature-card.center .feature-icon-container {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #b3e0ff, #66c2ff);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #0077b6;
+}
+
+.feature-card.center .feature-icon {
+  font-size: 2.2rem;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0a2472;
+  margin-bottom: 15px;
+}
+
+.feature-card.center .feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: #5e6472;
+  line-height: 1.6;
+}
+
+.feature-card.center .feature-description {
+  font-size: 1rem;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #d1e3f6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #0077b6;
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .feature-card {
+    flex: 0 0 220px;
+    height: 280px;
+  }
+  
+  .feature-card.center {
+    flex: 0 0 250px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-features {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .carousel-slider {
+    min-height: 300px;
+  }
+  
+  .feature-card {
+    flex: 0 0 180px;
+    height: 240px;
+    padding: 20px;
+  }
+  
+  .feature-card.center {
+    flex: 0 0 200px;
+    height: 280px;
+  }
+  
+  .feature-icon-container {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .feature-card.center .feature-icon-container {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card.center .feature-title {
+    font-size: 1.3rem;
+  }
+  
+  .feature-description {
+    font-size: 0.85rem;
+  }
+  
+  .feature-card.center .feature-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .carousel-slider {
+    min-height: 250px;
+  }
+  
+  .feature-card {
+    flex: 0 0 150px;
+    height: 200px;
+    padding: 15px;
+  }
+  
+  .feature-card.center {
+    flex: 0 0 170px;
+    height: 220px;
+  }
+  
+  .nav-button {
+    width: 40px;
+    height: 40px;
+  }
+}

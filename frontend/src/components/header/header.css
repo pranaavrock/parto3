@@ -1,0 +1,79 @@
+/* Full-width header with gradient background */
+.stylish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #0f2027, #203a43, #2c5364); /* Gradient effect */
+  color: #fff;
+  padding: 1rem 1.5rem; /* Reduced padding */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98vw; /* Slightly reduced width */
+  height: 75px; /* Slightly reduced height */
+  z-index: 1000;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Adjust body padding to avoid content hiding under header */
+body {
+  padding-top: 75px; /* Matches header height */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  margin-right: 8px;
+  font-size: 1.5em;
+}
+
+/* Navigation Styling */
+.nav-links {
+  display: flex;
+  gap: 1.2rem; /* Reduced gap to bring links slightly left */
+  margin-right: 20px; /* Moves links slightly left */
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem; /* Reduced padding for better alignment */
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Active link indicator */
+.nav-link.active {
+  background-color: #007bff;
+  font-weight: bold;
+}
+
+/* Login and Account Button */
+.login-link {
+  background-color: #007bff;
+  padding: 0.5rem 1rem;
+}
+
+.login-link:hover {
+  background-color: #0056b3;
+}
+
+.account-link {
+  background-color: #28a745;
+  padding: 0.5rem 1rem;
+}
+
+.account-link:hover {
+  background-color: #218838;
+}

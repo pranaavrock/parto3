@@ -1,0 +1,167 @@
+/* Why Choose Us CSS */
+.why-choose-us {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0a2472;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #5e6472;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  border: 2px solid;
+  transition: all 0.3s ease;
+}
+
+.feature-icon {
+  color: inherit;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0a2472;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #5e6472;
+  line-height: 1.7;
+}
+
+.feature-hover-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.feature-card:hover .feature-hover-bar {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .why-choose-us {
+    padding: 80px 0;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+  }
+  
+  .features-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 60px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .feature-card {
+    padding: 25px;
+  }
+  
+  .feature-icon-container {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .feature-card {
+    padding: 20px;
+  }
+}

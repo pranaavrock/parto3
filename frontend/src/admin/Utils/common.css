@@ -1,0 +1,135 @@
+/* .sidebar {
+  width: 200px;
+  height: 100%;
+  left: 0;
+  color: white;
+  border-right: 1px solid gray;
+
+  @media (max-width: 768px) {
+    width: 30px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      cursor: pointer;
+      padding: 12px;
+
+      @media (max-width: 768px) {
+        padding: 7px;
+      }
+
+      &:hover {
+        background-color: gray;
+      }
+
+      a {
+        display: flex;
+        text-decoration: none;
+        counter-reset: blueviolet;
+
+        span {
+          margin-left: 15px;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashboard-admin {
+  display: flex;
+  min-height: 80vh;
+  margin-top: 20px;
+} */
+ .sidebar {
+  width: 200px;
+  height: 100vh; /* Full height */
+  position: fixed; /* Stays fixed on the left */
+  top: 10;
+  left: 0;
+  background-color: #333; /* Dark theme */
+  color: white;
+  border-right: 1px solid gray;
+  overflow-y: auto; /* Allow scrolling if needed */
+  padding-top: 20px;
+  transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: #444; /* Slightly lighter on hover */
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center; /* Align icon & text */
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.sidebar__icon {
+  font-size: 20px; /* Icon size */
+}
+
+.sidebar span {
+  margin-left: 15px;
+  transition: opacity 0.3s;
+}
+
+/* Sidebar collapsed view for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px; /* Collapsed sidebar */
+  }
+
+  .sidebar span {
+    display: none; /* Hide text when collapsed */
+  }
+
+  .sidebar a {
+    justify-content: center;
+  }
+}
+
+/* Layout container to prevent content overlap */
+.dashboard-admin {
+  display: flex;
+  min-height: 100vh;
+  width: calc(100% - 200px);
+  margin-left: 200px; /* Ensure sidebar doesn't overlap */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+.content1 {
+  flex-grow: 1;
+  padding: 20px;
+}
+/* Adjust for mobile view */
+@media (max-width: 768px) {
+  .dashboard-admin {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+}
