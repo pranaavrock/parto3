@@ -26,7 +26,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./home.css";
 import Testimonials from "../../components/testimonials/Testimonials";
-import CourseFeatures from "../../components/coursefeatures/coursefeatures";
+import CourseFeatures from "../../components/coursefeatures/Coursefeatures";
 import WhyChooseUs from "../../components/whychooseus/Whychooseus";
 import FAQSection from "../../components/FAQSection/FAQSection";
 const Home = () => {
